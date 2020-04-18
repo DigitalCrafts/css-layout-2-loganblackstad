@@ -34,10 +34,12 @@
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
+/* set image width to 80% for the chess pieces inside each square */
 img {
   width: 80%;
 }
 
+/* defines the css for the border squares containing the numbers and letters */
 .border {
   display: flex;
   justify-content: center;

@@ -1,7 +1,3 @@
-* {
-  border: 1px red;
-}
-
 :root {
   --yellow: rgb(249, 228, 24);
   --blue: rgb(13, 127, 190);
@@ -11,6 +7,7 @@
   --white: rgb(255, 255, 255);
 }
 
+/* define one-leterr attributes to easily define each box color in the html */
 [color="w"] {
   background-color: var(--white);
 }
@@ -27,11 +24,14 @@
   background-color: var(--black);
 }
 
-.mega-tainer {
+/* set display to flex so that the twp panels apear next to one another */
+.super-container {
   display: flex;
 }
 
-.tainer {
+/* Two panels containing boxes were initialized in the html to create this mondrian  */
+/* the panel containers define the grid layout for each rectangular box in the artwork */
+.panel {
   display: grid;
   grid-gap: 2%;
   width: 33vw;
@@ -41,165 +41,162 @@
   padding-bottom: 1.5vw;
 }
 
-#con1 {
+/* set grid template and padding for panel 1 */
+#panel1 {
   padding-left: 1.5vw;
   grid-template-columns: 14.7% 6.3% 14.7% 10.4% 10.4% 14.7% 14.7%;
   grid-template-rows: 8.1% 18.4% 18.4% 8.1% 8.1% 8.1% 8.1% 8.1%;
 }
 
-#con2 {
+/* set grid template and padding for panel 2 (i.e., the mirrored mondrian panel) */
+#panel2 {
   padding-left: 0vw;
   padding-right: 0.7vw;
   grid-template-columns: 14.7% 14.7% 10.4% 10.4% 14.7% 6.3% 14.7%;
   grid-template-rows: 8.1% 8.1% 8.1% 8.1% 8.1% 18.4% 18.4% 8.1%;
 }
 
-[class*="b"] {
+/* add a shadow around each box */
+[class*="box"] {
   box-shadow: 2px 2px 2px rgb(40, 40, 40);
   border-radius: 1px;
   box-sizing: border-box;
   display: flex;
 }
 
-[class*="c"] {
-  box-shadow: 2px 2px 2px rgb(40, 40, 40);
-  border-radius: 1px;
-  box-sizing: border-box;
-  display: flex;
-}
-
+/* define the grid area for each box in the mondrian */
 /* grid-area: ( row-start / column-start / row-end / column-end ) */
 
-.b1 {
+.p1-box-1 {
   grid-area: 1/1/2/3;
 }
-.b2 {
+.p1-box-2 {
   grid-area: 1/3/2/6;
 }
-.b3 {
+.p1-box-3 {
   grid-area: 1/6/2/8;
 }
-.b4 {
+.p1-box-4 {
   grid-area: 2/1/3/2;
 }
-.b5 {
+.p1-box-5 {
   grid-area: 2/2/4/6;
 }
-.b6 {
+.p1-box-6 {
   grid-area: 2/6/3/8;
 }
-.b7 {
+.p1-box-7 {
   grid-area: 3/1/5/2;
 }
-.b8 {
+.p1-box-8 {
   grid-area: 3/6/4/7;
 }
-.b9 {
+.p1-box-9 {
   grid-area: 3/7/4/8;
 }
-.b10 {
+.p1-box-10 {
   grid-area: 4/2/6/4;
 }
-.b11 {
+.p1-box-11 {
   grid-area: 4/4/5/6;
 }
-.b12 {
+.p1-box-12 {
   grid-area: 4/6/5/8;
 }
-.b13 {
+.p1-box-13 {
   grid-area: 5/1/8/2;
 }
-.b14 {
+.p1-box-14 {
   grid-area: 5/4/6/6;
 }
-.b15 {
+.p1-box-15 {
   grid-area: 5/6/7/8;
 }
-.b16 {
+.p1-box-16 {
   grid-area: 6/2/8/4;
 }
-.b17 {
+.p1-box-17 {
   grid-area: 6/4/7/6;
 }
-.b18 {
+.p1-box-18 {
   grid-area: 7/4/9/5;
 }
-.b19 {
+.p1-box-19 {
   grid-area: 7/5/9/6;
 }
-.b20 {
+.p1-box-20 {
   grid-area: 7/6/9/8;
 }
-.b21 {
+.p1-box-21 {
   grid-area: 8/1/9/4;
 }
 
-.c1 {
+.p2-box-1 {
   grid-area: 8/6/9/8;
 }
-.c2 {
+.p2-box-2 {
   grid-area: 8/3/9/6;
 }
-.c3 {
+.p2-box-3 {
   grid-area: 8/2/9/3;
 }
-.c35 {
+.p2-box-3-split {
   grid-area: 8/1/9/2;
 }
-.c4 {
+.p2-box-4 {
   grid-area: 7/7/8/8;
 }
-.c5 {
+.p2-box-5 {
   grid-area: 6/3/8/7;
 }
-.c6 {
+.p2-box-6 {
   grid-area: 7/1/8/3;
 }
-.c7 {
+.p2-box-7 {
   grid-area: 5/7/7/8;
 }
-.c8 {
+.p2-box-8 {
   grid-area: 6/2/7/3;
 }
-.c9 {
+.p2-box-9 {
   grid-area: 6/1/7/2;
 }
-.c10 {
+.p2-box-10 {
   grid-area: 4/5/6/7;
 }
-.c11 {
+.p2-box-11 {
   grid-area: 5/3/6/5;
 }
-.c12 {
+.p2-box-12 {
   grid-area: 5/1/6/3;
 }
-.c13 {
+.p2-box-13 {
   grid-area: 2/7/5/8;
 }
-.c14 {
+.p2-box-14 {
   grid-area: 4/3/5/5;
 }
-.c15 {
+.p2-box-15 {
   grid-area: 3/1/5/3;
 }
-.c16 {
+.p2-box-16 {
   grid-area: 2/5/4/7;
 }
-.c17 {
+.p2-box-17 {
   grid-area: 3/3/4/5;
 }
-.c18 {
+.p2-box-18 {
   grid-area: 2/3/3/5;
 }
-.c19 {
+.p2-box-19 {
   grid-area: 1/3/2/4;
 }
-.c20 {
+.p2-box-20 {
   grid-area: 1/1/3/3;
 }
-.c21 {
+.p2-box-21 {
   grid-area: 1/5/2/8;
 }
-.c215 {
+.p2-box-21-split {
   grid-area: 1/4/2/5;
 }
